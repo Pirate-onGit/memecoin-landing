@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>$KELAH-Your mom</title>
+  <style>
+
+    html{
+      scroll-behavior: smooth;
+    }
+
+   nav {
+     display: flex;
+     justify-content: center;
+     gap: 20px;
+     margin-bottom: 30px;
+    }
+
+   nav a {
+     color: #a78bfa;
+     text-decoration: none;
+     font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+
+    .section p {
+     opacity: 0.85;
+    }
+
+   .section {
+     margin-top: 40px;
+    }
+
+   h2 {
+     font-size: 24px;
+     margin-bottom: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #0b0b0f;
+      color: rgb(234, 212, 235);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 254, 254, 0.25);
+      filter: blur(120px);
+      z-index: -1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    button {
+     background: linear-gradient(135deg, #7c3aed, #9333ea);
+     color: white;
+     border: none;
+     padding: 16px 28px;
+     border-radius: 9999px;
+     font-size: 16px;
+     font-weight: 600;
+     cursor: pointer;
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    button:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4);
+    }
+    @media (max-width: 600px) {
+       h1 {
+         font-size: 32px;
+        }
+
+       p {
+         font-size: 16px;
+        }
+
+       button {
+         width: 100%;
+    }
+
+    .container {
+      padding: 16px;
+      }
+    }  
+  </style>
+</head>
+
+<body>
+  
+  <div class="container">
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#tokenomics">Tokenomics</a>
+      <a href="#roadmap">Roadmap</a>
+    </nav>
+
+    <img src="images/logo.png.JPG" alt="Token Logo" width="100px" style="margin-bottom: 10px;"/>
+    <h1>$KELAH</h1>
+    <p>The next big Pirate 🚀</p>
+
+    <button id="copyBtn">Copy Contract Address</button>
+    <p id="copyStatus" style="margin-top:10px; font-size:14px; opacity:0.8;"></p>
+
+    <a href="https://dexscreener.com/solana/" target="_blank">
+        <button>View Chart</button>
+    </a>
+
+    <p style="margin-top: 20px;">
+        <a href="https://twitter.com" target="_blank" style="color:#ffffff;">Twitter</a> |
+        <a href="https://t.me" target="_blank" style="color:#fdfdfd;">Telegram</a>
+    </p> 
+
+    <div class="section" id="about">
+        <h2>About</h2>
+        <p>
+          $KELAH is a community-driven Solana memecoin built for fun,
+          vibes, and absolutely no promises.
+        </p>
+    </div>
+      
+    <div class="section" id="tokenomics">
+        <h2>Tokenomics</h2>
+        <p>Total Supply: 1,000,000,000</p>
+        <p>Liquidity: Burned </p>
+        <p>Tax: 0%</p>
+    </div>
+      
+      <div class="section" id="roadmap">
+        <h2>Roadmap</h2>
+        <p>Phase 1: Launch</p>
+        <p>Phase 2: Community growth</p>
+        <p>Phase 3: Moon </p>
+    </div>
+
+  </div>
+
+  <script>
+    const copyBtn = document.getElementById("copyBtn");
+    const copyStatus = document.getElementById("copyStatus");
+  
+    const contractAddress = "So11111111111111111111111111111111111111112";
+  
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(contractAddress);
+      copyStatus.textContent = "Contract address copied ✅";
+    });
+  </script>
+  
+</body>
+</html>
